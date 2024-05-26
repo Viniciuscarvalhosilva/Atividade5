@@ -77,7 +77,7 @@ public class AlunoActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<Aluno> call, Response<Aluno> response) {
                     if (response.isSuccessful()) {
-                        txtra.setText(response.body().getRa());
+                        txtra.setText(String.valueOf(response.body().getRa()));
                         txtnome.setText(response.body().getNome());
                         txtcep.setText(response.body().getCep());
                         txtcidade.setText(response.body().getCidade());
@@ -102,8 +102,10 @@ public class AlunoActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+
+                int ra = Integer.parseInt(txtra.getText().toString());
                 Aluno aluno = new Aluno();
-                aluno.setRa(txtra.getText().toString());
+                aluno.setRa(ra);
                 aluno.setNome(txtnome.getText().toString());
                 aluno.setCep(txtcep.getText().toString());
                 aluno.setLogradouro(txtlogradouro.getText().toString());
