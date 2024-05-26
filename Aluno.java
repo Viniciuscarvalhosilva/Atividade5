@@ -8,10 +8,10 @@ public class Aluno {
     private String bairro;
     private String cidade;
     private String uf;
-    private String ra;
+    private int ra;
     private int id;
 
-    public Aluno(String nome, String cep, String logradouro, String complemento, String bairro, String cidade, String uf , String ra , int id){
+    public Aluno(String nome, String cep, String logradouro, String complemento, String bairro, String cidade, String uf , int ra , int id){
 
         this.nome = nome;
         this.cep = cep;
@@ -70,10 +70,10 @@ public class Aluno {
     public void setUf(String uf) {
         this.uf = uf;
     }
-    public String getRa() {
+    public int getRa() {
         return ra;
     }
-    public void setRa(String ra) {
+    public void setRa(int ra) {
         this.ra = ra;
     }
     public int getId() {return id;}
