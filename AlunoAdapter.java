@@ -44,7 +44,7 @@ public class AlunoAdapter extends RecyclerView.Adapter<AlunoAdapter.AlunoHolder>
     @Override
     public void onBindViewHolder(AlunoHolder holder, int position) {
         holder.nome.setText(alunos.get(position).getNome());
-        holder.ra.setText(alunos.get(position).getRa());
+        holder.ra.setText(String.valueOf(alunos.get(position).getRa()));
         holder.cep.setText(alunos.get(position).getCep());
         holder.logradouro.setText(alunos.get(position).getLogradouro());
         holder.complemento.setText(alunos.get(position).getComplemento());
